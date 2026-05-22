@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codveda – Real-Time Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="join-screen" class="join-screen">
+    <form id="join-form" class="join-card">
+      <h1>Codveda Chat</h1>
+      <p class="subtitle">Enter a username to start chatting</p>
+      <input id="username-input" type="text" placeholder="Username" maxlength="30" required autocomplete="off" />
+      <button type="submit" class="btn primary">Join</button>
+    </form>
+  </div>
+
+  <div id="chat-screen" class="chat-screen" hidden>
+    <aside class="sidebar">
+      <h2>Online <span id="online-count">(0)</span></h2>
+      <ul id="online-list"></ul>
+      <footer class="sidebar-foot">
+        <p>Codveda · Level 3 Task 2</p>
+        <button id="leave-btn" class="btn small ghost">Leave</button>
+      </footer>
+    </aside>
+
+    <main class="chat-main">
+      <header class="chat-header">
+        <h1>General</h1>
+        <p id="typing-indicator" class="typing"></p>
+      </header>
+
+      <div id="messages" class="messages"></div>
+
+      <form id="message-form" class="message-form">
+        <input id="message-input" type="text" placeholder="Type a message..." maxlength="500" autocomplete="off" />
+        <button type="submit" class="btn primary">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
