@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codveda – Users Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Users Dashboard</h1>
+    <p class="subtitle">Codveda Internship – Level 1 Task 3</p>
+  </header>
+
+  <main class="container">
+    <section class="panel form-panel">
+      <h2 id="form-title">Add New User</h2>
+      <form id="user-form" novalidate>
+        <input type="hidden" id="user-id" />
+        <label>
+          Name
+          <input type="text" id="name" required minlength="2" maxlength="80" placeholder="Ada Lovelace" />
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" required placeholder="ada@example.com" />
+        </label>
+        <label>
+          Age
+          <input type="number" id="age" min="0" max="130" placeholder="36" />
+        </label>
+        <div class="form-actions">
+          <button type="submit" id="submit-btn" class="btn primary">Create</button>
+          <button type="button" id="cancel-btn" class="btn ghost" hidden>Cancel</button>
+        </div>
+        <p id="form-msg" class="msg" role="status"></p>
+      </form>
+    </section>
+
+    <section class="panel list-panel">
+      <div class="list-header">
+        <h2>All Users</h2>
+        <button id="refresh-btn" class="btn ghost">Refresh</button>
+      </div>
+      <p id="list-status" class="msg" role="status"></p>
+      <div id="user-grid" class="user-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Kwadwo Wilson · Codveda Technology Internship</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

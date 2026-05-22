@@ -1,0 +1,22 @@
+{
+  "name": "codveda-level1-task2-rest-api",
+  "version": "1.0.0",
+  "description": "REST API with full CRUD for a users resource using Express and MongoDB (Mongoose).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["express", "mongodb", "mongoose", "rest", "crud", "codveda"],
+  "author": "Kwadwo Wilson",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
